@@ -85,6 +85,7 @@ supported_commands_by_ecu:
   - 7E0.7E8.221115|din=C0,dout=81:NI_EVAP_P
   - 7E0.7E8.221117|din=C0,dout=81:NI_LOAD
   - 7E0.7E8.22111A|din=C0,dout=81:NI_O2S12
+  - 7E0.7E8.22111F
   - 7E0.7E8.22111F|din=C0,dout=81:NI_EOT
   - 7E0.7E8.221123|din=C0,dout=81:NI_STFT1
   - 7E0.7E8.221125|din=C0,dout=81:NI_LTFT1
