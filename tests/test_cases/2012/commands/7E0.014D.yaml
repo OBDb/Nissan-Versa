@@ -1,6 +1,12 @@
 command_id: 7E0.014D
 test_cases:
 - expected_values:
+    MIL_TIME: 2
+  response: 7E804414D0002
+- expected_values:
+    MIL_TIME: 3
+  response: 7E804414D0003
+- expected_values:
     MIL_TIME: 2363
   response: 7E804414D093B
 - expected_values:

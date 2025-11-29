@@ -1,0 +1,8 @@
+command_id: DB33.221305|din=C0,dout=81
+test_cases:
+- expected_values:
+    NI_BRAKE: 0
+  response: '7E8056213052844'
+- expected_values:
+    NI_BRAKE: 1
+  response: 7E8056213052C44
