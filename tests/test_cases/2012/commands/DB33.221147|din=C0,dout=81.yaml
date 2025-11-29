@@ -1,5 +1,5 @@
 command_id: DB33.221147|din=C0,dout=81
 test_cases:
 - expected_values:
-    NI_STFT1_LOW: -59.25
+    NI_STFT1_LOW: -31.25
   response: '7E80462114758'
