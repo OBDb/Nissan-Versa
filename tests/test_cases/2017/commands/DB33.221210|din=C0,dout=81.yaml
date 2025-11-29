@@ -1,0 +1,8 @@
+command_id: DB33.221210|din=C0,dout=81
+test_cases:
+- expected_values:
+    NI_TPP2_V: 0.6
+  response: '7E8056212100078'
+- expected_values:
+    NI_TPP2_V: 0.605
+  response: '7E8056212100079'

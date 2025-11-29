@@ -1,0 +1,18 @@
+command_id: DB33.221302|din=C0,dout=81
+test_cases:
+- expected_values:
+    NI_AC: 0
+    NI_ADDLOAD: 0
+    NI_CVT_POSITION: 1
+    NI_POWER_STEERING: 0
+    NI_START_SIGNAL: 0
+    NI_THROTTLE_CLOSED: 1
+  response: 7E805621302053F
+- expected_values:
+    NI_AC: 1
+    NI_ADDLOAD: 0
+    NI_CVT_POSITION: 1
+    NI_POWER_STEERING: 0
+    NI_START_SIGNAL: 0
+    NI_THROTTLE_CLOSED: 1
+  response: 7E805621302153F

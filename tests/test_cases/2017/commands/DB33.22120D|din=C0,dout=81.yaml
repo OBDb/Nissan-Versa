@@ -1,0 +1,8 @@
+command_id: DB33.22120D|din=C0,dout=81
+test_cases:
+- expected_values:
+    NI_APP1_V: 0.775
+  response: 7E80562120D009B
+- expected_values:
+    NI_APP1_V: 0.78
+  response: 7E80562120D009C

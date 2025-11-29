@@ -1,0 +1,9 @@
+command_id: DB33.22130C|din=C0,dout=81
+test_cases:
+- expected_values:
+    NI_SRT_CAT: 1
+    NI_SRT_EGR: 1
+    NI_SRT_HO2S: 1
+    NI_SRT_HO2S_HTR: 1
+    NI_SRT_REFRIGERANT: 0
+  response: 7E80562130CE5E5
