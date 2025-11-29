@@ -1,0 +1,5 @@
+command_id: DB33.221209|din=C0,dout=81
+test_cases:
+- expected_values:
+    NI_MAF: 2.61
+  response: '7E8056212090105'

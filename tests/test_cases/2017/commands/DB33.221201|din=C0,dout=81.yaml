@@ -1,0 +1,5 @@
+command_id: DB33.221201|din=C0,dout=81
+test_cases:
+- expected_values:
+    NI_RPM: 662.5
+  response: '7E8056212010035'

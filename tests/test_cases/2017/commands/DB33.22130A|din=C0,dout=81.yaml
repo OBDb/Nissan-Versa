@@ -1,0 +1,5 @@
+command_id: DB33.22130A|din=C0,dout=81
+test_cases:
+- expected_values:
+    NI_COLD_START: 0
+  response: 7E80562130A1010
