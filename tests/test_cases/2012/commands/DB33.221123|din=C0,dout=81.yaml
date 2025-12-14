@@ -4,6 +4,9 @@ test_cases:
     NI_STFT1: -27.34375
   response: 7E8046211235D
 - expected_values:
+    NI_STFT1: -26.5625
+  response: 7E8046211235E
+- expected_values:
     NI_STFT1: -25.78125
   response: 7E8046211235F
 - expected_values:
@@ -24,3 +27,6 @@ test_cases:
 - expected_values:
     NI_STFT1: -21.09375
   response: '7E80462112365'
+- expected_values:
+    NI_STFT1: -20.3125
+  response: '7E80462112366'
