@@ -10,5 +10,5 @@ test_cases:
     NI_MAF: 2.56
   response: '7E8056212090100'
 - expected_values:
-    NI_MAF: 38.13
-  response: 7E8056212090EE5
+    NI_MAF: 38.68
+  response: 7E8056212090F1C
