@@ -4,5 +4,5 @@ test_cases:
     NI_VSS: 0
   response: '7E80462110200'
 - expected_values:
-    NI_VSS: 110
-  response: '7E80462110237'
+    NI_VSS: 132
+  response: '7E80462110242'
