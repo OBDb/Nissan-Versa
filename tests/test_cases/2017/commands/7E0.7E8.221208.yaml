@@ -1,0 +1,8 @@
+command_id: 7E0.7E8.221208
+test_cases:
+- expected_values:
+    VERSA_FUEL_BASE_WIDTH: 1.59961
+  response: 7E8056212080CCC
+- expected_values:
+    VERSA_FUEL_BASE_WIDTH: 1.60645
+  response: 7E8056212080CDA

@@ -1,4 +1,497 @@
 { "commands": [
-
+{ "hdr": "740", "rax": "760", "dbg": true, "cmd": {"22": "1115"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_APP", "path": "Control", "fmt": { "len": 8, "max": 127.5, "div": 2, "unit": "percent" }, "name": "Accelerator pedal position"}
+  ]},
+{ "hdr": "740", "rax": "760", "fcm1": true, "dbg": true, "cmd": {"22": "1208"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_ABS_STEER_ANG", "path": "Control", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "degrees" }, "name": "Anti-lock brake steering angle"}
+  ]},
+{ "hdr": "740", "rax": "760", "dbg": true, "cmd": {"22": "1209"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_BRAKE_MC_P", "path": "Control", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Brake master cylinder pressure count"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 30,
+  "signals": [
+    {"id": "VERSA_ODO_METER", "path": "Trips", "fmt": {"bix": 56, "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E01"}, "freq": 30, "dbgfilter": { "to": 2020, "from": 2022 },
+  "signals": [
+    {"id": "VERSA_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E25"}, "freq": 15, "dbgfilter": { "to": 2020, "from": 2022 },
+  "signals": [
+    {"id": "VERSA_TP_FR", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E26"}, "freq": 15, "dbgfilter": { "to": 2020, "from": 2022 },
+  "signals": [
+    {"id": "VERSA_TP_FL", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E27"}, "freq": 15, "dbgfilter": { "to": 2020, "from": 2022 },
+  "signals": [
+    {"id": "VERSA_TP_RR", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E28"}, "freq": 15, "dbgfilter": { "to": 2020, "from": 2022 },
+  "signals": [
+    {"id": "VERSA_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E2E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2022 },
+  "signals": [
+    {"id": "VERSA_RANGE", "path": "Trips", "fmt": { "len": 16, "max": 2047, "nullmin": 0, "nullmax": 2047, "unit": "kilometers" }, "name": "Range remaining", "suggestedMetric": "electricRange"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "69"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_ALTERNATOR_SETPOINT_V", "path": "Battery", "fmt": { "len": 16, "max": 1310, "div": 50, "unit": "volts" }, "name": "ALTERNATOR set point VOLTAGE"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "AD"}, "freq": 3600,
+  "signals": [
+    {"id": "VERSA_COLD_STARTING",      "path": "Engine",  "fmt": {            "len": 8,  "max": 255,                                                             "unit": "scalar"         }, "name": "Cold starting programming"},
+    {"id": "VERSA_FUEL_RAIL_T_SENS_V", "path": "Battery", "fmt": {"bix": 8,   "len": 8,  "max": 4.98,               "mul": 5,         "div": 256,                "unit": "volts"          }, "name": "Fuel rail temperature sensor voltage"},
+    {"id": "VERSA_FUEL_RAIL_T",        "path": "Fuel",    "fmt": {"bix": 16,  "len": 8,  "max": 143,   "min": -48,  "mul": 3,         "div": 4,     "add": -48,  "unit": "celsius"        }, "name": "Fuel rail temperature"},
+    {"id": "VERSA_VAPOR_LOCK_T",       "path": "Engine",  "fmt": {"bix": 24,  "len": 8,  "max": 143,   "min": -48,  "mul": 3,         "div": 4,     "add": -48,  "unit": "celsius"        }, "name": "Vapor lock temperature"},
+    {"id": "VERSA_FUEL_TANK_T_SENS_V", "path": "Battery", "fmt": {"bix": 32,  "len": 8,  "max": 4.98,               "mul": 5,         "div": 256,                "unit": "volts"          }, "name": "Fuel tank temperature sensor voltage"},
+    {"id": "VERSA_FUEL_TANK_T",        "path": "Fuel",    "fmt": {"bix": 40,  "len": 8,  "max": 143,   "min": -48,  "mul": 3,         "div": 4,     "add": -48,  "unit": "celsius"        }, "name": "Fuel tank temperature"},
+    {"id": "VERSA_TANK_P",             "path": "Engine",  "fmt": {"bix": 120, "len": 16, "max": 32767,                                "div": 2,                  "unit": "unknown"        }, "name": "Tank pressure"},
+    {"id": "VERSA_LPLI_PMP_PWM_SIG",   "path": "Engine",  "fmt": {"bix": 160, "len": 16, "max": 99.99,              "mul": 0.0015259,                            "unit": "percent"        }, "name": "Low-pressure fuel pump drive duty"},
+    {"id": "VERSA_FUEL_PMP_FLOW",      "path": "Fuel",    "fmt": {"bix": 176, "len": 8,  "max": 31.87,                                "div": 8,                  "unit": "gramsPerSecond" }, "name": "Fuel pump flow"},
+    {"id": "VERSA_EFP_LEARNING",       "path": "Engine",  "fmt": {"bix": 184, "len": 16, "max": 0.5,   "min": -0.5,                   "div": 65535, "add": -0.5, "unit": "percent"        }, "name": "Electric fuel pump learning value"},
+    {"id": "VERSA_BUTANE_PERCENTAGE",  "path": "Engine",  "fmt": {"bix": 200, "len": 8,  "max": 99.61,              "mul": 7813,      "div": 20000,              "unit": "percent"        }, "name": "Butane percentage"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "110A"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_IGN_TIM_ADVANCE", "path": "Engine", "fmt": { "len": 8, "max": 110, "min": -145, "mul": -1, "add": 110, "unit": "degrees" }, "name": "Ignition timing advance"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1110"}, "freq": 1, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016], "from": 2018 },
+  "signals": [
+    {"id": "VERSA_EVAP_PURGE_DUTY", "path": "Engine", "fmt": { "len": 8, "max": 127, "div": 2, "unit": "percent" }, "name": "EVAP purge duty"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1111"}, "freq": 5, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016], "from": 2018 },
+  "signals": [
+    {"id": "VERSA_FUEL_T_7E0", "path": "Fuel", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Fuel temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1123"}, "freq": 1, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016], "from": 2018 },
+  "signals": [
+    {"id": "VERSA_F_RAT_ADJ", "path": "Engine", "fmt": { "len": 8, "max": 155, "min": -100, "add": -100, "unit": "percent" }, "name": "A/F ratio adj"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1124"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_AF_ADJ_B2", "path": "Fuel", "fmt": { "len": 8, "max": 155, "min": -100, "add": -100, "unit": "percent" }, "name": "Air/fuel ratio adjustment, bank 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "112A"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_MANIFOLD_P_SENS_V", "path": "Battery", "fmt": { "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "Manifold pressure sensor voltage"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1135"}, "freq": 1, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016], "from": 2018 },
+  "signals": [
+    {"id": "VERSA_CAM_ADV_ANG", "path": "Engine", "fmt": { "len": 8, "max": 63.5, "min": -64, "div": 2, "add": -64, "unit": "degrees" }, "name": "Camshaft adv angle"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1137"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_CAM_ADV_B2", "path": "Engine", "fmt": { "len": 8, "max": 63.5, "min": -64, "div": 2, "add": -64, "unit": "degrees" }, "name": "Intake camshaft advance, bank 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1138"}, "freq": 1, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016], "from": 2018 },
+  "signals": [
+    {"id": "VERSA_CAM_VLV_DUTY", "path": "Engine", "fmt": { "len": 8, "max": 99.6, "mul": 25, "div": 64, "unit": "percent" }, "name": "Camshaft valve duty"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1139"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_CAM_DUTY_B2", "path": "Engine", "fmt": { "len": 8, "max": 99.6, "mul": 25, "div": 64, "unit": "percent" }, "name": "Intake valve timing solenoid duty, bank 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "113C"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_IGN_ADVANCE", "path": "Engine", "fmt": { "len": 8, "max": 112, "min": -143, "mul": -1, "add": 112, "unit": "scalar" }, "name": "Ignition advance"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1186"}, "freq": 30,
+  "signals": [
+    {"id": "VERSA_FUEL_REMAINING", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "liters" }, "name": "Remaining fuel"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1201"}, "freq": 0.25, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016], "from": 2018 },
+  "signals": [
+    {"id": "VERSA_CURRENT_RPM", "path": "Movement", "fmt": { "len": 16, "max": 819187, "mul": 25, "div": 2, "unit": "rpm" }, "name": "Current engine speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1204"}, "freq": 1, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016], "from": 2018 },
+  "signals": [
+    {"id": "VERSA_MAF_VOLTS", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Mass air flow volts"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1205"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_MAF_V_B2", "path": "Engine", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Mass air flow sensor voltage, bank 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1208"}, "freq": 1, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016], "from": 2018 },
+  "signals": [
+    {"id": "VERSA_FUEL_BASE_WIDTH", "path": "Fuel", "fmt": { "len": 16, "max": 31.99, "div": 2048, "unit": "milliseconds" }, "name": "Fuel base pulse width"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1209"}, "freq": 1, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016], "from": 2018 },
+  "signals": [
+    {"id": "VERSA_MAF", "path": "Engine", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "gramsPerSecond" }, "name": "Mass air flow"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1223"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_REFRIGERANT_FLUID_V", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Refrigerant fluid sensor voltage"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1225"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_UP_OXYGEN_SENS_V", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Upstream oxygen sensor voltage"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "122B"}, "freq": 30, "dbgfilter": { "to": 2020, "years": [2022, 2023], "from": 2025 },
+  "signals": [
+    {"id": "VERSA_CC_S", "path": "Cruise control", "fmt": { "len": 16, "max": 3686, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Cruise control set speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1266"}, "freq": 5,
+  "signals": [
+    {"id": "VERSA_VVT_OIL_T", "path": "Engine", "fmt": { "len": 16, "max": 1262, "min": -273, "mul": 3, "div": 128, "add": -273, "unit": "celsius" }, "name": "Variable valve timing oil temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1307"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_AC_COMP",        "path": "Engine", "fmt": {"bix": 1, "len": 1, "max": 1, "unit": "scalar" }, "name": "Air conditioning compressor"},
+    {"id": "VERSA_IDLE_CTRL_MODE", "path": "Engine", "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "scalar" }, "name": "Idle control mode"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "130D"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_BRAKE_SWITCH_NUMBER_2", "path": "Control", "fmt": {"bix": 2, "len": 1, "max": 1, "unit": "offon" }, "name": "BRAKE SWITCH, number 2"},
+    {"id": "VERSA_BRAKE_SWITCH_NUMBER_1", "path": "Control", "fmt": {"bix": 3, "len": 1, "max": 1, "unit": "offon" }, "name": "BRAKE SWITCH, number 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1313"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_COOLING_FAN_LOW",  "path": "Engine", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cooling fan low"},
+    {"id": "VERSA_COOLING_FAN_HIGH", "path": "Engine", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "scalar" }, "name": "Cooling fan high"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1406"}, "freq": 5,
+  "signals": [
+    {"id": "VERSA_ECT_7E0", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Coolant temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "140E"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_MANIFOLD_P", "path": "Engine", "fmt": { "len": 8, "max": 255000, "mul": 1000, "unit": "unknown" }, "name": "Manifold pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "140F"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_THROTTLE_OPENING", "path": "Engine", "fmt": { "len": 8, "max": 89.25, "mul": 7, "div": 20, "unit": "degrees" }, "name": "Throttle opening"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2004"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_ENG_TQ", "path": "Engine", "fmt": { "len": 16, "max": 32367, "min": -400, "div": 2, "add": -400, "unit": "newtonMeters" }, "name": "Engine torque"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "200F"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_BRAKING_DETECTED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Braking detected multiplex signal"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2026"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_WIRED_BRAKE_CONTACT", "path": "Control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "Wired brake contact"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "204B"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_CRUISE_CTRL_SPD", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Cruise control/speed limiter buttons"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2079"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_PARKING_BRAKE",       "path": "Control",      "fmt": {"bix": 3, "len": 1, "max": 1, "unit": "offon" }, "name": "Parking brake"},
+    {"id": "VERSA_CRUISE_CTRL",         "path": "Engine",       "fmt": {"bix": 4, "len": 1, "max": 1, "unit": "offon" }, "name": "Cruise control"},
+    {"id": "VERSA_TRACTION_CTRL_ANTI",  "path": "Engine",       "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "offon" }, "name": "Traction control/anti-yaw control"},
+    {"id": "VERSA_ENGAGE_REVERSE_GEAR", "path": "Transmission", "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "offon" }, "name": "Engage reverse gear"},
+    {"id": "VERSA_STARTER_BUTTON",      "path": "Engine",       "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "Starter button"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "207A"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_DUR_RESUME_BUTTON", "path": "Engine", "fmt": { "len": 16, "max": 3276, "div": 20, "unit": "seconds" }, "name": "Duration of resume button press"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "207B"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_DUR_BUTTON_PRESS", "path": "Engine", "fmt": { "len": 16, "max": 3276, "div": 20, "unit": "seconds" }, "name": "Duration of + button press"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "207C"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_DUR_BUTTON_PRESS_7E0", "path": "Engine", "fmt": { "len": 16, "max": 3276, "div": 20, "unit": "seconds" }, "name": "Duration of - button press"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "207D"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_DUR_SUSPEND_BUTTON", "path": "Engine", "fmt": { "len": 16, "max": 3276, "div": 20, "unit": "seconds" }, "name": "Duration of suspend button press"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "207E"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_NUM_ABNORMAL_CC_SL", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of abnormal cc/sl transitions"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2170"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_CHANGE_VSS_UNIT", "path": "Movement", "fmt": {"bix": 4, "len": 1, "max": 1, "unit": "offon" }, "name": "Change of vehicle speed unit"},
+    {"id": "VERSA_AUTO_EMERGENCY",  "path": "Engine",   "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "offon" }, "name": "Auto emergency braking system request"},
+    {"id": "VERSA_STOP_WARN_LIGHT", "path": "Lights",   "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "Stop warning light"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2225"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_VSS_MULTIPLEXED", "path": "Movement", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "Vehicle speed multiplexed information"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "222B"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_MANUAL_OR_ASSISTED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Manual or assisted parking brake"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "22AA"}, "freq": 3600,
+  "signals": [
+    {"id": "VERSA_STARTER_WEAR_CNT", "path": "Engine", "fmt": {"bix": 40, "len": 24, "max": 16777215, "unit": "scalar" }, "name": "Starter wear counter"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2C04"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_GEARBOX_RAT", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gearbox ratio"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "VERSA_OUTPUT_SPD",   "path": "Movement",     "fmt": {"bix": 40,  "len": 16, "max": 65535,                                                              "unit": "rpm"        }, "name": "Output speed"},
+    {"id": "VERSA_TURBINE_SPD",  "path": "Movement",     "fmt": {"bix": 56,  "len": 16, "max": 65535,                                                              "unit": "rpm"        }, "name": "Turbine speed"},
+    {"id": "VERSA_TQ_CONV_SLIP", "path": "Transmission", "fmt": {"bix": 120, "len": 16, "max": 32767, "min": -32768,                                 "sign": true, "unit": "rpm"        }, "name": "Torque converter slip"},
+    {"id": "VERSA_ATF_T_VAR_1",  "path": "Transmission", "fmt": {"bix": 152, "len": 8,  "max": 392,   "min": -67,    "mul": 9, "div": 5, "add": -67,               "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 1"},
+    {"id": "VERSA_ATF_T_VAR_2",  "path": "Transmission", "fmt": {"bix": 160, "len": 8,  "max": 392,   "min": -67,    "mul": 9, "div": 5, "add": -67,               "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 2"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"21": "03"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TRANS_ATF", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Transmission ATF deterioration date"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"21": "10"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TRANS_B",                   "path": "Transmission", "fmt": {            "len": 16, "max": 65535,           "unit": "scalar" }, "name": "Transmission-B"},
+    {"id": "VERSA_TRANS_WORK_HOURS",          "path": "Transmission", "fmt": {"bix": 32,  "len": 16, "max": 10922, "div": 6, "unit": "hours"  }, "name": "Transmission work hours"},
+    {"id": "VERSA_TRANS",                     "path": "Transmission", "fmt": {"bix": 64,  "len": 8,  "max": 255,             "unit": "scalar" }, "name": "Transmission-A"},
+    {"id": "VERSA_TRANS_WORK_HOURS_WARM_ENG", "path": "Transmission", "fmt": {"bix": 192, "len": 16, "max": 10922, "div": 6, "unit": "hours"  }, "name": "Transmission work hours warm engine"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1101"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_VSS_SENS", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed sensor"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1102"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_VSS_EST", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Estimated vehicle speed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1103"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_VSS", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "110A"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_SEC_P", "path": "Transmission", "fmt": { "len": 16, "max": 1638375, "mul": 25, "unit": "kilopascal" }, "name": "Secondary pulley pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "110B"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_PRI_P", "path": "Transmission", "fmt": { "len": 16, "max": 1638375, "mul": 25, "unit": "kilopascal" }, "name": "Primary pulley pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "110C"}, "freq": 5,
+  "signals": [
+    {"id": "VERSA_TCM_ATF_T", "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "110D"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_LUBE_P", "path": "Transmission", "fmt": { "len": 8, "max": 1270, "min": -1280, "mul": 10, "sign": true, "unit": "kilopascal" }, "name": "Lubrication pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "110E"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_LINE_P", "path": "Transmission", "fmt": { "len": 8, "max": 6375, "mul": 25, "unit": "kilopascal" }, "name": "Line pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "110F"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_PRI_P_TGT", "path": "Transmission", "fmt": { "len": 8, "max": 6375, "mul": 25, "unit": "kilopascal" }, "name": "Target primary pulley pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1110"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_SEL_P_TGT", "path": "Transmission", "fmt": { "len": 8, "max": 6375, "mul": 25, "unit": "kilopascal" }, "name": "Target select pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1111"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_SEC_P_TGT", "path": "Transmission", "fmt": { "len": 8, "max": 6375, "mul": 25, "unit": "kilopascal" }, "name": "Target secondary pulley pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1112"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_REQ_TQ_D", "path": "Transmission", "fmt": { "len": 8, "max": 354, "min": -156, "mul": 2, "add": 100, "sign": true, "unit": "newtonMeters" }, "name": "Requested torque delta"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1113"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_REQ_TQ", "path": "Transmission", "fmt": { "len": 8, "max": 354, "min": -156, "mul": 2, "add": 100, "sign": true, "unit": "newtonMeters" }, "name": "Requested torque"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1114"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_REQ_RPM", "path": "Transmission", "fmt": { "len": 8, "max": 12750, "mul": 50, "unit": "rpm" }, "name": "Requested engine speed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1201"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_INPUT_RPM", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Input speed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1202"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_PRI_RPM", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Primary pulley speed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1203"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_SEC_RPM", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Secondary pulley speed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1204"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_RPM", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Engine speed", "suggestedMetric": "engineSpeed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1205"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_SEC_P_V", "path": "Transmission", "fmt": { "len": 16, "max": 320, "mul": 5, "div": 1023, "unit": "volts" }, "name": "Secondary pressure sensor voltage"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1206"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_PRI_P_V", "path": "Transmission", "fmt": { "len": 16, "max": 320, "mul": 5, "div": 1023, "unit": "volts" }, "name": "Primary pressure sensor voltage"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1207"}, "freq": 5,
+  "signals": [
+    {"id": "VERSA_TCM_ATF_T_V", "path": "Transmission", "fmt": { "len": 16, "max": 320, "mul": 5, "div": 1023, "unit": "volts" }, "name": "Fluid temperature sensor voltage"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1208"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_G_V", "path": "Transmission", "fmt": { "len": 16, "max": 3.27, "min": -3.27, "div": 10000, "sign": true, "unit": "volts" }, "name": "Acceleration sensor voltage"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "120C"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_INPUT_RPM_2", "path": "Transmission", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Input speed, alternate"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "120D"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_PRI_RPM_2", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Primary pulley speed, alternate"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "120E"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_SEC_RPM_2", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Secondary pulley speed, alternate"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "120F"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_RPM_2", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Engine speed, alternate"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1210"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_PULLEY_RAT", "path": "Transmission", "fmt": { "len": 16, "max": 6.55, "div": 10000, "unit": "scalar" }, "name": "Pulley ratio"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1212"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_ENG_TQ_ACT", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Engine torque, active"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1213"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_ENG_TQ_TX", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Engine torque, transmitted"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1214"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_ENG_TQ", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Engine torque"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1215"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_PRI_TQ", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Primary pulley torque"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1216"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_TCM_TQ_RAT", "path": "Transmission", "fmt": { "len": 16, "max": 236, "mul": 577, "div": 160000, "unit": "scalar" }, "name": "Torque ratio"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1218"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_PULLEY_RAT_TGT", "path": "Transmission", "fmt": { "len": 16, "max": 6.55, "div": 10000, "unit": "scalar" }, "name": "Target pulley ratio"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1219"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_ISO_1_C", "path": "Transmission", "fmt": { "len": 8, "max": 0.255, "div": 1000, "unit": "amps" }, "name": "Isolation solenoid 1 current"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "121A"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_ISO_2_C", "path": "Transmission", "fmt": { "len": 8, "max": 0.255, "div": 1000, "unit": "amps" }, "name": "Isolation solenoid 2 current"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "121B"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_PRI_SOL_C", "path": "Transmission", "fmt": { "len": 8, "max": 0.255, "div": 1000, "unit": "amps" }, "name": "Primary solenoid current"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "121C"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_SEC_SOL_C", "path": "Transmission", "fmt": { "len": 8, "max": 0.255, "div": 1000, "unit": "amps" }, "name": "Secondary solenoid current"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "121D"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_SEL_SOL_C", "path": "Transmission", "fmt": { "len": 8, "max": 0.255, "div": 1000, "unit": "amps" }, "name": "Select solenoid current"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "121E"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_SOL_MON_1", "path": "Transmission", "fmt": { "len": 8, "max": 0.255, "div": 1000, "unit": "amps" }, "name": "Solenoid 1 monitor current"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "121F"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_SOL_MON_2", "path": "Transmission", "fmt": { "len": 8, "max": 0.255, "div": 1000, "unit": "amps" }, "name": "Solenoid 2 monitor current"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1221"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_PRI_SOL_MON", "path": "Transmission", "fmt": { "len": 8, "max": 0.255, "div": 1000, "unit": "amps" }, "name": "Primary solenoid monitor current"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1222"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_SEC_SOL_MON", "path": "Transmission", "fmt": { "len": 8, "max": 0.255, "div": 1000, "unit": "amps" }, "name": "Secondary solenoid monitor current"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1223"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_TCM_SEL_SOL_MON", "path": "Transmission", "fmt": { "len": 8, "max": 0.255, "div": 1000, "unit": "amps" }, "name": "Select solenoid monitor current"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1105"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_EGR_T_SENS_V", "path": "Battery", "fmt": { "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "Exhaust gas recirculation temperature sensor voltage"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1111"}, "freq": 5,
+  "signals": [
+    {"id": "VERSA_FUEL_T", "path": "Fuel", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Fuel temperature"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1114"}, "freq": 30,
+  "signals": [
+    {"id": "VERSA_FLI_INPUT", "path": "Fuel", "fmt": { "len": 8, "max": 10.2, "div": 25, "unit": "volts" }, "name": "Fuel level input"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1115"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_EVAP_P_SENS_V", "path": "Battery", "fmt": { "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "EVAP pressure sensor voltage"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "111F"}, "freq": 5,
+  "signals": [
+    {"id": "VERSA_EOT", "path": "Engine", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Engine oil temperature"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1207"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_BASE_INJ_TIM", "path": "Engine", "fmt": { "len": 16, "max": 31.99, "div": 2048, "unit": "milliseconds" }, "name": "Base injection timing"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "120C"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_FUEL_P_SENS_V", "path": "Battery", "fmt": { "len": 16, "max": 20, "mul": 4, "div": 13107, "unit": "volts" }, "name": "Fuel pressure sensor voltage"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "120D"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_ACCEL_PEDAL_POS_SENS_1", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Accelerator pedal position sensor 1, volts"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "120E"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_ACCEL_PEDAL_POS_SENS_2", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Accelerator pedal position sensor 2, volts"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "120F"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_THROTTLE_POS_SENS_1", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Throttle position sensor 1, volts"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1210"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_THROTTLE_POS_SENS_2", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Throttle position sensor 2, volts"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "121F"}, "freq": 1,
+  "signals": [
+    {"id": "VERSA_ROLL_OVER_SENS_V", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Roll-over sensor voltage"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2170"}, "freq": 5,
+  "signals": [
+    {"id": "VERSA_ATF_T", "path": "Transmission", "fmt": {"bix": 232, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature"}
+  ]},
+{ "hdr": "DA2D", "rax": "2D", "dbg": true, "cmd": {"22": "4B00"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_FL_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
+  ]},
+{ "hdr": "DA2D", "rax": "2D", "dbg": true, "cmd": {"22": "4B01"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_FR_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
+  ]},
+{ "hdr": "DA2D", "rax": "2D", "dbg": true, "cmd": {"22": "4B02"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_RL_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "DA2D", "rax": "2D", "dbg": true, "cmd": {"22": "4B03"}, "freq": 0.25,
+  "signals": [
+    {"id": "VERSA_RR_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]}
 ]
 }
