@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.221204
+test_cases:
+- expected_values:
+    VERSA_MAF_VOLTS: 1.215
+  response: 7E80562120400F3

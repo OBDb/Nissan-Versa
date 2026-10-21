@@ -1,0 +1,32 @@
+command_id: 7E0.7E8.221123
+test_cases:
+- expected_values:
+    VERSA_F_RAT_ADJ: -7
+  response: 7E8046211235D
+- expected_values:
+    VERSA_F_RAT_ADJ: -6
+  response: 7E8046211235E
+- expected_values:
+    VERSA_F_RAT_ADJ: -5
+  response: 7E8046211235F
+- expected_values:
+    VERSA_F_RAT_ADJ: -4
+  response: '7E80462112360'
+- expected_values:
+    VERSA_F_RAT_ADJ: -3
+  response: '7E80462112361'
+- expected_values:
+    VERSA_F_RAT_ADJ: -2
+  response: '7E80462112362'
+- expected_values:
+    VERSA_F_RAT_ADJ: -1
+  response: '7E80462112363'
+- expected_values:
+    VERSA_F_RAT_ADJ: 0
+  response: '7E80462112364'
+- expected_values:
+    VERSA_F_RAT_ADJ: 1
+  response: '7E80462112365'
+- expected_values:
+    VERSA_F_RAT_ADJ: 2
+  response: '7E80462112366'

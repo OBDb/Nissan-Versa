@@ -1,0 +1,14 @@
+command_id: 7E0.7E8.221209
+test_cases:
+- expected_values:
+    VERSA_MAF: 2.01
+  response: 7E80562120900C9
+- expected_values:
+    VERSA_MAF: 5.15
+  response: '7E8056212090203'
+- expected_values:
+    VERSA_MAF: 25.59
+  response: 7E80562120909FF
+- expected_values:
+    VERSA_MAF: 32.53
+  response: 7E8056212090CB5
