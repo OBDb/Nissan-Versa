@@ -1,0 +1,8 @@
+command_id: 7E0.7E8.221111
+test_cases:
+- expected_values:
+    VERSA_FUEL_T_7E0: 7
+  response: '7E80462111139'
+- expected_values:
+    VERSA_FUEL_T_7E0: 8
+  response: 7E8046211113A

@@ -1,0 +1,8 @@
+command_id: 7E0.7E8.221123
+test_cases:
+- expected_values:
+    VERSA_F_RAT_ADJ: -9
+  response: 7E8046211235B
+- expected_values:
+    VERSA_F_RAT_ADJ: 9
+  response: 7E8046211236D
