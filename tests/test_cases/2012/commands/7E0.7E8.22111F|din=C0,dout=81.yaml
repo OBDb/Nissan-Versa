@@ -1,0 +1,8 @@
+command_id: 7E0.7E8.22111F|din=C0,dout=81
+test_cases:
+- expected_values:
+    VERSA_VARIABLE_VLV_TIM_OIL_T: 7
+  response: 7E80462111F39
+- expected_values:
+    VERSA_VARIABLE_VLV_TIM_OIL_T: 91
+  response: 7E80462111F8D

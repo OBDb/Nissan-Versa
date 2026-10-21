@@ -70,8 +70,8 @@ supported_commands_by_ecu:
   - 7E0.7E8.221101|din=C0,dout=81:NI_ECT
   - 7E0.7E8.221102
   - 7E0.7E8.221102|din=C0,dout=81:NI_VSS
-  - 7E0.7E8.221103
   - 7E0.7E8.221103|din=C0,dout=81:NI_VPWR
+  - 7E0.7E8.221103|din=C0,dout=81:VERSA_VPWR_ECM
   - 7E0.7E8.221106
   - 7E0.7E8.221106|din=C0,dout=81:NI_IAT
   - 7E0.7E8.221110
@@ -86,8 +86,8 @@ supported_commands_by_ecu:
   - 7E0.7E8.221117|din=C0,dout=81:NI_LOAD
   - 7E0.7E8.22111A
   - 7E0.7E8.22111A|din=C0,dout=81:NI_O2S12
-  - 7E0.7E8.22111F
   - 7E0.7E8.22111F|din=C0,dout=81:NI_EOT
+  - 7E0.7E8.22111F|din=C0,dout=81:VERSA_VARIABLE_VLV_TIM_OIL_T
   - 7E0.7E8.221123
   - 7E0.7E8.221123|din=C0,dout=81:NI_STFT1
   - 7E0.7E8.221125
@@ -112,7 +112,7 @@ supported_commands_by_ecu:
   - 7E0.7E8.221210
   - 7E0.7E8.221302
   - 7E0.7E8.221304
-  - 7E0.7E8.221305
+  - 7E0.7E8.221305|din=C0,dout=81:VERSA_BRAKE_SWITCH
   - 7E0.7E8.22130A
   - 7E0.7E8.22130C
 unsupported_commands_by_ecu:

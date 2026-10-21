@@ -1,0 +1,8 @@
+command_id: 7E0.7E8.221103|din=C0,dout=81
+test_cases:
+- expected_values:
+    VERSA_VPWR_ECM: 12
+  response: '7E80462110396'
+- expected_values:
+    VERSA_VPWR_ECM: 14.72
+  response: 7E804621103B8
