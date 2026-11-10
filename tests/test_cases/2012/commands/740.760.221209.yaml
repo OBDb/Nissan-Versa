@@ -1,6 +1,24 @@
 command_id: 740.760.221209
 test_cases:
 - expected_values:
+    VERSA_BRAKE_MC_P: 29
+  response: 76005621209001D
+- expected_values:
+    VERSA_BRAKE_MC_P: 45
+  response: 76005621209002D
+- expected_values:
+    VERSA_BRAKE_MC_P: 46
+  response: 76005621209002E
+- expected_values:
+    VERSA_BRAKE_MC_P: 49
+  response: '760056212090031'
+- expected_values:
+    VERSA_BRAKE_MC_P: 55
+  response: '760056212090037'
+- expected_values:
+    VERSA_BRAKE_MC_P: 58
+  response: 76005621209003A
+- expected_values:
     VERSA_BRAKE_MC_P: 88
   response: '760056212090058'
 - expected_values:
