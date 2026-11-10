@@ -1,0 +1,8 @@
+command_id: 7E0.7E8.221305|din=C0,dout=81
+test_cases:
+- expected_values:
+    VERSA_BRAKE_SWITCH: 0
+  response: '7E8056213052844'
+- expected_values:
+    VERSA_BRAKE_SWITCH: 1
+  response: 7E8056213052C44
