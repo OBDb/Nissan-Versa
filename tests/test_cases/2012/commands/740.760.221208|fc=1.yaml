@@ -1,17 +1,11 @@
 command_id: 740.760.221208|fc=1
 test_cases:
 - expected_values:
-    VERSA_ABS_STEER_ANG: 13.4
-  response: '760056212080086'
-- expected_values:
-    VERSA_ABS_STEER_ANG: 16.7
-  response: 7600562120800A7
-- expected_values:
-    VERSA_ABS_STEER_ANG: 258.8
-  response: 760056212080A1C
+    VERSA_ABS_STEER_ANG: 1.1
+  response: 76005621208000B
 - expected_values:
     VERSA_ABS_STEER_ANG: -25.6
   response: 76005621208FF00
 - expected_values:
-    VERSA_ABS_STEER_ANG: -19.1
-  response: 76005621208FF41
+    VERSA_ABS_STEER_ANG: -0.3
+  response: 76005621208FFFD
