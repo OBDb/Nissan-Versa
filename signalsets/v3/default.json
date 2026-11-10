@@ -3,19 +3,19 @@
     { "hdr": "7E1", "type": "transmission" }
   ],
   "commands": [
-{ "hdr": "740", "rax": "760", "dbg": true, "cmd": {"22": "1115"}, "freq": 0.25,
+{ "hdr": "740", "rax": "760", "cmd": {"22": "1115"}, "freq": 0.25, "dbgfilter": { "to": 2011, "from": 2013 },
   "signals": [
     {"id": "VERSA_APP", "path": "Control", "fmt": { "len": 8, "max": 127.5, "div": 2, "unit": "percent" }, "name": "Accelerator pedal position"}
   ]},
-{ "hdr": "740", "rax": "760", "fcm1": true, "dbg": true, "cmd": {"22": "1208"}, "freq": 0.25,
+{ "hdr": "740", "rax": "760", "fcm1": true, "cmd": {"22": "1208"}, "freq": 0.25, "dbgfilter": { "to": 2011, "from": 2013 },
   "signals": [
     {"id": "VERSA_ABS_STEER_ANG", "path": "Control", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "degrees" }, "name": "Anti-lock brake steering angle"}
   ]},
-{ "hdr": "740", "rax": "760", "dbg": true, "cmd": {"22": "1209"}, "freq": 0.25,
+{ "hdr": "740", "rax": "760", "cmd": {"22": "1209"}, "freq": 0.25, "dbgfilter": { "to": 2011, "from": 2013 },
   "signals": [
     {"id": "VERSA_BRAKE_MC_P", "path": "Control", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Brake master cylinder pressure count"}
   ]},
-{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 30,
+{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"21": "01"}, "freq": 30, "dbgfilter": { "to": 2011, "from": 2013 },
   "signals": [
     {"id": "VERSA_ODO_METER", "path": "Trips", "fmt": {"bix": 56, "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
@@ -145,7 +145,7 @@
   "signals": [
     {"id": "VERSA_UP_OXYGEN_SENS_V", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Upstream oxygen sensor voltage"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "122B"}, "freq": 30, "dbgfilter": { "to": 2020, "years": [2022, 2023], "from": 2025 },
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "122B"}, "freq": 30, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022, 2023], "from": 2025 },
   "signals": [
     {"id": "VERSA_CC_S", "path": "Cruise control", "fmt": { "len": 16, "max": 3686, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Cruise control set speed"}
   ]},
@@ -153,7 +153,7 @@
   "signals": [
     {"id": "VERSA_VVT_OIL_T", "path": "Engine", "fmt": { "len": 16, "max": 1262, "min": -273, "mul": 3, "div": 128, "add": -273, "unit": "celsius" }, "name": "Variable valve timing oil temperature"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "cmd": {"22": "1305"}, "freq": 0.25, "dbgfilter": { "to": 2016, "from": 2018 },
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "cmd": {"22": "1305"}, "freq": 0.25, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016], "from": 2018 },
   "signals": [
     {"id": "VERSA_BRAKE_SWITCH", "path": "Control", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "scalar" }, "name": "Brake switch"}
   ]},
@@ -254,7 +254,7 @@
   "signals": [
     {"id": "VERSA_GEARBOX_RAT", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gearbox ratio"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "cmd": {"21": "01"}, "freq": 5, "dbgfilter": { "to": 2011, "from": 2013 },
   "signals": [
     {"id": "VERSA_OUTPUT_SPD",   "path": "Movement",     "fmt": {"bix": 40,  "len": 16, "max": 65535,                                                              "unit": "rpm"        }, "name": "Output speed"},
     {"id": "VERSA_TURBINE_SPD",  "path": "Movement",     "fmt": {"bix": 56,  "len": 16, "max": 65535,                                                              "unit": "rpm"        }, "name": "Turbine speed"},
@@ -262,11 +262,11 @@
     {"id": "VERSA_ATF_T_VAR_1",  "path": "Transmission", "fmt": {"bix": 152, "len": 8,  "max": 392,   "min": -67,    "mul": 9, "div": 5, "add": -67,               "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 1"},
     {"id": "VERSA_ATF_T_VAR_2",  "path": "Transmission", "fmt": {"bix": 160, "len": 8,  "max": 392,   "min": -67,    "mul": 9, "div": 5, "add": -67,               "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 2"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"21": "03"}, "freq": 1,
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "cmd": {"21": "03"}, "freq": 1, "dbgfilter": { "to": 2011, "from": 2013 },
   "signals": [
     {"id": "VERSA_TRANS_ATF", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Transmission ATF deterioration date"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"21": "10"}, "freq": 1,
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "cmd": {"21": "10"}, "freq": 1, "dbgfilter": { "to": 2011, "from": 2013 },
   "signals": [
     {"id": "VERSA_TRANS_B",                   "path": "Transmission", "fmt": {            "len": 16, "max": 65535,           "unit": "scalar" }, "name": "Transmission-B"},
     {"id": "VERSA_TRANS_WORK_HOURS",          "path": "Transmission", "fmt": {"bix": 32,  "len": 16, "max": 10922, "div": 6, "unit": "hours"  }, "name": "Transmission work hours"},

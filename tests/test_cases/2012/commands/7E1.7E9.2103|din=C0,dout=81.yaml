@@ -1,0 +1,5 @@
+command_id: 7E1.7E9.2103|din=C0,dout=81
+test_cases:
+- expected_values:
+    VERSA_TRANS_ATF: 75372
+  response: 7E90661030001266C
