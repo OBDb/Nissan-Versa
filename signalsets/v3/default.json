@@ -39,7 +39,7 @@
   "signals": [
     {"id": "VERSA_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
   ]},
-{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E2E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2022 },
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E2E"}, "freq": 1,
   "signals": [
     {"id": "VERSA_RANGE", "path": "Trips", "fmt": { "len": 16, "max": 2047, "nullmin": 0, "nullmax": 2047, "unit": "kilometers" }, "name": "Range remaining", "suggestedMetric": "electricRange"}
   ]},
@@ -145,7 +145,7 @@
   "signals": [
     {"id": "VERSA_UP_OXYGEN_SENS_V", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Upstream oxygen sensor voltage"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "122B"}, "freq": 30, "dbgfilter": { "to": 2020, "years": [2022, 2023], "from": 2025 },
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "122B"}, "freq": 30, "dbgfilter": { "to": 2011, "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022, 2023], "from": 2025 },
   "signals": [
     {"id": "VERSA_CC_S", "path": "Cruise control", "fmt": { "len": 16, "max": 3686, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Cruise control set speed", "suggestedMetric": "cruiseSetSpeed"}
   ]},
